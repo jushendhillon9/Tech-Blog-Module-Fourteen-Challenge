@@ -1,0 +1,10 @@
+<div id = "allBlogsContainer">
+    {{#each allUsersPosts}}
+        {{> homepageAndDashboard-details homepage=../homepage dashboard= ../dashboard isLoggedIn= ../isLoggedIn}}
+    {{/each}}
+</div>
+{{#if addPostButton}}
+<div id = "postButtonContainer">
+    <button id = "postButton">+ New Post</button>
+</div>
+{{/if}}

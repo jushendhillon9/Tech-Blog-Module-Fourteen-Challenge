@@ -1,0 +1,21 @@
+<div id = "signupCardContainer">
+    <div id = "signupCard">
+        <div id = "signupHeader">{{#if signup}}Signup{{else}}Login{{/if}}</div>
+        <div class = "linebreak"></div>
+        <div id = "usernameContainer">
+            <div id = "username">Username</div>
+            <input id = "usernameInput">
+        </div>
+        <div class = "linebreak"></div>
+        <div id = "passwordContainer">
+            <div id = "password">Password</div>
+            <input id = "passwordInput">
+        </div>
+        <div class = "linebreak"></div>
+        <button id = "signupButton">{{#if signup}}Sign Up!{{else}}Login!{{/if}}</button>
+        <div class = "linebreak"></div>
+        <div id = "switchToLoginContainer">
+            <a id = "switchToLoginLink" {{#if signup}}href = "/signup"{{else}}href = "/signup?redirect=true"{{/if}}>{{#if signup}}Login instead {{else}}Signup instead{{/if}}</a>
+        </div>
+    </div>
+</div>

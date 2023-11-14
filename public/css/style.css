@@ -1,0 +1,257 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Signika", cursive; 
+    text-decoration: none;
+}
+
+.linebreak {
+    height: 2px;
+    flex-basis: 100%;
+}
+
+#header {
+    background-color: #393e46;
+    display: flex;
+    flex-wrap: wrap;
+    height: 20vh;
+}
+
+#navLinks {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    font-size: 25px;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+#navLinks a {
+    margin: 20px;
+    color: #f96d00;
+}
+
+#headerContainer {
+    padding: 20px;
+    padding-left: 50px;
+    padding-top: 0px;
+}
+
+#blogTitle {
+    display: flex;
+    font-size: 33px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f96d00;
+    margin-left: 20px;
+    border-radius: 9%;
+    box-shadow: 7px 7px 0px 0px;
+}
+
+#bodyContainer {
+    height: 80vh;
+    background-color:#222831;
+}
+
+#allBlogsContainer {
+    background-color: #222831;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.blogPostContainer, #commentContainer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FAF9F6;
+    margin: 9px;
+}
+
+#toCommentPage {
+    cursor: pointer;
+}
+
+#comment {
+    margin: 5px;
+    font-size: 20px;
+}
+
+#postHeaderContainer {
+    background-color: #393e46;
+    padding: 10px;
+    padding-bottom: 7px;
+    font-size: 20px;
+    color: #FAF9F6;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#commentHeaderContainer {
+    background-color: #393e46;
+    padding: 17px;
+    font-size: 20px;
+    color: #FAF9F6;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#restOfCommentContainer {
+    border: 5px solid #393e46;
+}
+
+#insideCommentContainer {
+    margin:  10px;
+}
+
+#postHeader {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 5px;
+    top: 0px;
+}
+
+#postCredentials {
+    font-size: 12px;
+}
+
+#postContent {
+    border: 5px solid #393e46;
+    padding: 15px;
+}
+
+#signupCardContainer, #createPostContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#signupCard, #createPostCard {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #393e46;
+    color: #f96d00;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#signupHeader, #createPostHeader {
+    font-size: 23px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #393e46;
+    width: 100%;
+}
+
+#usernameContainer, #passwordContainer, #titleContainer, #contentContainer {
+    margin-left: 10px;
+    width: 100%;
+}
+
+#titleContainer, #contentContainer {
+    margin-left: 25px;
+}
+
+#username, #password {
+    font-size: 17px;
+    margin: 3px;
+    margin-left: 0px;
+}
+
+#commentPageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 110px;
+}
+
+#usernameInput, #passwordInput, #titleInput, #contentInput, #commentInput {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #FAF9F6;
+    font-size: 15px;
+}
+
+#titleInput {
+    border: 3px solid #f96d00;
+    width: 93%;
+    font-size: 20px;
+}
+
+#contentInput, #commentInput{
+    padding: 20px;
+    border: 3px solid #f96d00;
+    width: 91%;
+    padding-top: 5px;
+    font-size: 17px;
+    padding-bottom: 30px;
+}
+
+#signupButton, #createButton {
+    width: 95%;
+    padding: 5px;
+    margin: 12px;
+    text-align: center;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    background-color: #393e46;
+    border: none;
+    color: #FAF9F6;
+    cursor: pointer;
+}
+
+#submitCommentButton  {
+    width: 100%;
+    padding: 5px;
+    margin: 12px;
+    text-align: center;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    background-color: #393e46;
+    border: none;
+    color: #FAF9F6;
+    cursor: pointer;
+}
+
+#switchToLoginContainer {
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+#switchToLoginLink:visited {
+    color: #f96d00;
+}
+
+#postButtonContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+#postButton {
+    font-size: 20px;
+    background-color: #f96d00;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}

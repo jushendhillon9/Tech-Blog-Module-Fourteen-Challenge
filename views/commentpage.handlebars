@@ -1,0 +1,22 @@
+<div id = "commentPageContainer" data-postID = "{{selectedPost.id}}">
+    <div class = "blogPostContainer">
+        <div id = "postHeaderContainer">
+            <div id = "postHeader">{{selectedPost.post_header}}</div>
+            <div id = "postCredentials">-{{selectedPost.author}}, {{selectedPost.createdAt}}</div>
+        </div>
+        <div id = "postContent">{{selectedPost.post_content}}</div>
+    </div>
+    <div class = "linebreak"></div>
+    <div id = "commentContainer">
+        <div id = "commentHeaderContainer"></div>
+            <div id = "restOfCommentContainer">
+                <div id = "insideCommentContainer">
+                    <div id = "comment">Comment</div>
+                    <textarea id = "commentInput"></textarea>
+                    <div id = "buttonContainer">
+                    <button id = "submitCommentButton">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

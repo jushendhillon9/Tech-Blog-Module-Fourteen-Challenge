@@ -1,0 +1,11 @@
+<a {{#if dashboard}}{{/if}} {{#if homepage}} data-postID = "{{this.id}}"{{#if isLoggedIn}}id = "toCommentPage"{{/if}}{{/if}} class = "blogPostContainer">
+    <div id = "postHeaderContainer">
+        <div id = "postHeader">{{this.post_header}}</div>
+        <div id = "postCredentials">-{{this.author}}, {{this.createdAt}}</div>
+    </div>
+    <div id = "postContent">{{this.post_content}}</div>
+    <div>
+        
+    </div>
+</a>
+<div class = "linebreak"></div>

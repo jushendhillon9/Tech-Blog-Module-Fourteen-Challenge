@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Hipster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Lilita+One&family=Orbitron:wght@900&family=Signika:wght@300&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "/css/style.css">
+</head>
+<body>
+    <div id = "header">
+        <nav id = "navLinks">
+            <a href = "/homepage">Home</a>
+            {{#if isLoggedIn}} <!-- equals true-->
+            <a href = "/dashboard">Dashboard</a>
+            {{else}}
+            {{/if}}
+            {{#if isLoggedIn}} <!-- equals true-->
+            <a id = "logOutButton" href = "/api/logout">Log Out</a>
+            {{else}}
+            <a id = "logInButton" href = "/signup">Log In</a>
+            {{/if}}
+        </nav>
+        <div class = "linebreak"></div>
+        <div id = "headerContainer"> 
+            <header id = "blogTitle">The Tech Hipster</header>
+        </div>
+    </div>
+    <div id = "bodyContainer">
+        {{{body}}} <!--will either be: homepage, dashboard, or login/logout page-->
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+<script src = "/js/login&signup.js"></script>
+<script src = "/js/dashboard.js"></script>
+<script src = "/js/homepage.js"></script>
+<script src = "/js/createpost.js"></script>
+<script src = "/js/commentpage.js"></script>
+</html>
