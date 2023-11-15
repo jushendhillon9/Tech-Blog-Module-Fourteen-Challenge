@@ -8,12 +8,12 @@
         <div class = "linebreak"></div>
         <div id = "titleContainer">
             <div id = "postTitle">Title</div>
-            <input id = "titleInput">
+            <input id = "titleInput" {{#if createPost}}value = "{{editedPost.post_header}}"{{/if}}>
         </div>
         <div class = "linebreak"></div>
         <div id = "contentContainer">
             <div id = "content">Content</div>
-            <textarea id = "contentInput"></textarea>
+            <textarea id = "contentInput">{{#if createPost}} {{editedPost.post_content}}{{/if}}</textarea>
         </div>
         <div class = "linebreak"></div>
         {{#if createPost}}

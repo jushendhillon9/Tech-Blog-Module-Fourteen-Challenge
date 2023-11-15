@@ -93,6 +93,7 @@ router.get("/logout", async (req,res) => {
 
 router.post("/createpost", async (req, res) => {
     try {
+        
         let newUserPost = await UserPosts.create({
             author: req.session.userName,
             post_header: req.body.postTitle,
@@ -127,6 +128,45 @@ router.post("/addcomment", async (req, res) => {
 })
 
 //need an update post route, will be a post route
+
+router.put("/updatepost", async (req, res) => {
+    try {
+        let updatedPost = await UserPosts.update(
+            {
+                post_header: req.body.postTitle,
+                post_content: req.body.postContent,
+            },
+            {
+                where: {
+                    user_id: req.session.userID,
+                }
+            }
+        )
+        console.log(updatedPost);
+        res.json(updatedPost);
+    }
+    catch (err) {
+        console.log(err)
+        res.status(500).json(err);
+    }
+})
+
+router.delete("/deletepost", async (req, res) => {
+    try {
+        // Assuming you have a UserPosts model
+        await UserPosts.destroy({
+            where: {
+                user_id: req.session.userID,
+            },
+        });
+        res.status(200).json({ message: 'Posts deleted successfully' });
+    } catch (error) {
+        // Handle errors and send an error response
+        console.error("Error deleting posts:", error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 
 //need a delete post route, will be a delete route
 

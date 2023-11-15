@@ -18,7 +18,6 @@ router.get("/homepage", async (req, res) => {
         allUsersPosts.sort((a,b) => {
             return b.createdAt - a.createdAt;
         });
-        console.log("HEREEEE")
         for (const userPost of allUsersPosts) {
             userPost.createdAt = dayjs(userPost.createdAt).format("DD/MM/YYYY");
             for (const postComment of userPost.postComments) {
@@ -110,6 +109,7 @@ router.get("/commentpage:postID", async (req, res) => {
 
 router.get("/editpost:postID", async (req, res) => {
     try {
+        let createPost = false;
         let postID = req.params.postID;
         //use postID to get post
         const editedPostDB = await UserPosts.findOne({
@@ -118,7 +118,7 @@ router.get("/editpost:postID", async (req, res) => {
             }
         })
         const editedPost = editedPostDB.get({ plain: true });
-        res.render("createpost", {editedPost})
+        res.render("createPost", {createPost, editedPost})
     }
     catch (err) {
         console.log(err);
