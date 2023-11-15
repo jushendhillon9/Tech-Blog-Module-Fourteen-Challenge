@@ -118,12 +118,16 @@ router.post("/addcomment", async (req, res) => {
     const commenter = await commenterDB.get({plain: true});
     let authorname = commenter.userName;
     
-    await postComments.create({
+    let comment = await postComments.create({
         author: authorname,
         comment_content: req.body.commentContent,
         userPost_id: req.body.postID,
     })
-
+    res.json(comment);
 })
+
+//need an update post route, will be a post route
+
+//need a delete post route, will be a delete route
 
 module.exports = router;

@@ -18,9 +18,12 @@ router.get("/homepage", async (req, res) => {
         allUsersPosts.sort((a,b) => {
             return b.createdAt - a.createdAt;
         });
+        console.log("HEREEEE")
         for (const userPost of allUsersPosts) {
             userPost.createdAt = dayjs(userPost.createdAt).format("DD/MM/YYYY");
-            userPost.postComments.createdAt = dayjs(userPost.postComments.createdAt).format("DD/MM/YYYY");
+            for (const postComment of userPost.postComments) {
+                postComment.createdAt = dayjs(userPost.postComments.createdAt).format("DD/MM/YYYY");
+            }
         }
         res.render("homepage&dashboard", {homepage, allUsersPosts, isLoggedIn})
     }
@@ -79,7 +82,8 @@ router.get("/dashboard", async (req, res) => {
 
 router.get("/createpost", async (req, res) => {
     try {
-        res.render("createPost");
+        let createPost = true;
+        res.render("createPost", {createPost});
     }
     catch (err) {
         console.log(err)
@@ -100,6 +104,24 @@ router.get("/commentpage:postID", async (req, res) => {
     }
     catch (err) {
         console.log(err)
+        res.status(500).json(err);
+    }
+})
+
+router.get("/editpost:postID", async (req, res) => {
+    try {
+        let postID = req.params.postID;
+        //use postID to get post
+        const editedPostDB = await UserPosts.findOne({
+            where: {
+                id: postID
+            }
+        })
+        const editedPost = editedPostDB.get({ plain: true });
+        res.render("createpost", {editedPost})
+    }
+    catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 })

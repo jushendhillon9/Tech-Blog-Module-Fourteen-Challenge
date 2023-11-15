@@ -70,7 +70,11 @@
     margin: 9px;
 }
 
-#toCommentPage {
+#commentContainer {
+    width: 80%;
+}
+
+#toCommentPage, #editPostPage {
     cursor: pointer;
 }
 
@@ -108,6 +112,7 @@
 
 #insideCommentContainer {
     margin:  10px;
+    color: #FAF9F6;
 }
 
 #postHeader {
@@ -184,6 +189,16 @@
     font-size: 15px;
 }
 
+#commentedInput {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #393e46;
+    font-size: 15px;
+    color: #FAF9F6;
+}
+
 #titleInput {
     border: 3px solid #f96d00;
     width: 93%;
@@ -199,7 +214,7 @@
     padding-bottom: 30px;
 }
 
-#signupButton, #createButton {
+#signupButton, #createButton, #updatePost, #deletePostButton {
     width: 95%;
     padding: 5px;
     margin: 12px;
@@ -254,4 +269,11 @@
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
+}
+
+#commentDate {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding-right: 15px;
 }

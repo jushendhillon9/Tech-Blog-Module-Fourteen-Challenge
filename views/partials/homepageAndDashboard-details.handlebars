@@ -1,11 +1,12 @@
-<a {{#if dashboard}}{{/if}} {{#if homepage}} data-postID = "{{this.id}}"{{#if isLoggedIn}}id = "toCommentPage"{{/if}}{{/if}} class = "blogPostContainer">
-    <div id = "postHeaderContainer">
-        <div id = "postHeader">{{this.post_header}}</div>
-        <div id = "postCredentials">-{{this.author}}, {{this.createdAt}}</div>
+<a data-postID="{{this.id}}"{{#if homepage}} id="toCommentPage"{{/if}} {{#if dashboard}}id = "editPostPage"{{/if}}class="blogPostContainer">
+    <div id="postHeaderContainer">
+        <div id="postHeader">{{this.post_header}}</div>
+        <div id="postCredentials">-{{this.author}}, {{this.createdAt}}</div>
     </div>
-    <div id = "postContent">{{this.post_content}}</div>
-    <div>
-        
-    </div>
+    <div id="postContent">{{this.post_content}}</div>
 </a>
-<div class = "linebreak"></div>
+{{#if homepage}}
+    {{#each this.postComments}}
+        {{>commentPartial}}
+    {{/each}}
+{{/if}}

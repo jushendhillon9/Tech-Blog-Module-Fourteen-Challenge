@@ -4,6 +4,9 @@ const loginOrSignUp = $("#signupButton");
 loginOrSignUp.on("click", async () => {
     let userName = $("#usernameInput").val().trim();
     let password = $("#passwordInput").val().trim();
+    if (userName == "" || password == "") {
+        return;
+    }
     console.log(userName);
     console.log(password);
     if (loginOrSignUp.text() == "Sign Up!") {

@@ -1,6 +1,10 @@
 <div id = "createPostContainer">
     <div id = "createPostCard">
+        {{#if createPost}}
         <div id = "createPostHeader">Create New Post</div>
+        {{else}}
+        <div id = "createPostHeader">Update Post</div>
+        {{/if}}
         <div class = "linebreak"></div>
         <div id = "titleContainer">
             <div id = "postTitle">Title</div>
@@ -12,6 +16,11 @@
             <textarea id = "contentInput"></textarea>
         </div>
         <div class = "linebreak"></div>
-        <button id = "createButton">Create</button>
+        {{#if createPost}}
+            <button id = "createButton">Create</button>
+        {{else}}
+            <button id = "updatePost">Update Post</button>
+            <button id = "deletePostButton">Delete</button>
+        {{/if}}
     </div>
 </div>
