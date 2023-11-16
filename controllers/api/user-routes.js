@@ -168,10 +168,6 @@ router.delete("/deletepost", async (req, res) => {
     }
 });
 
-router.get("*", (req, res) => {
-    res.redirect("/homepage");
-});
-
 
 //need a delete post route, will be a delete route
 

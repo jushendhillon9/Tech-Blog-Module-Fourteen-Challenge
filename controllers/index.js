@@ -7,4 +7,8 @@ router.use("/", homeRoutes);
 router.use("/api", apiRoutes);
 //only features the /api/users, which will deal with user requests
 
+router.get("*", (req, res) => {
+    res.redirect("/homepage");
+});
+
 module.exports = router;
