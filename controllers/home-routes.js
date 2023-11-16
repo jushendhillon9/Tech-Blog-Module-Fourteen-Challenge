@@ -8,6 +8,7 @@ router.get("/homepage", async (req, res) => {
     try {
         let homepage = true;
         let isLoggedIn = req.session.isLoggedIn;
+        console.log(isLoggedIn);
         const allUserPostsDB = await UserPosts.findAll({
             include: {
                 model: postComments

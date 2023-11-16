@@ -71,16 +71,18 @@ router.post("/login", async (req, res) => {
             .json(err)
     }
 })
-
+/*
 router.get("/logout", async (req,res) => {
     try {
+        console.log("BEING HIT")
         if (req.session.isLoggedIn) {
+            console.log("DESTROYING NOW");
             req.session.destroy((err) => {
                 if (err) {
                     res.status(500).json(err);
                 }
                 else {
-                    res.redirect("/homepage")
+                    res.json({message: "Successful Logout!"})
                 }
             })
         }
@@ -89,7 +91,7 @@ router.get("/logout", async (req,res) => {
         console.log(err);
         res.status(500).json(err)
     }
-})
+})*/
 
 router.post("/createpost", async (req, res) => {
     try {
@@ -142,7 +144,6 @@ router.put("/updatepost", async (req, res) => {
                 }
             }
         )
-        console.log(updatedPost);
         res.json(updatedPost);
     }
     catch (err) {

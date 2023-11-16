@@ -13,7 +13,7 @@
     <div id = "header">
         <nav id = "navLinks">
             <a href = "/homepage">Home</a>
-            {{#if isLoggedIn}} <!-- equals true-->
+            {{#if isLoggedIn}} <!-- equals true--> {{log isLoggedIn}}
             <a href = "/dashboard">Dashboard</a>
             {{else}}
             {{/if}}
@@ -38,4 +38,5 @@
 <script src = "/js/homepage.js"></script>
 <script src = "/js/createpost.js"></script>
 <script src = "/js/commentpage.js"></script>
+<script src = "/js/main.js"></script>
 </html>
