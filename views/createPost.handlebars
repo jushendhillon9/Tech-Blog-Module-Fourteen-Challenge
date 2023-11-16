@@ -1,4 +1,4 @@
-<div id = "createPostContainer">
+<div id = "createPostContainer"> {{log editedPost}}
     <div id = "createPostCard">
         {{#if createPost}}
         <div id = "createPostHeader">Create New Post</div>
@@ -8,12 +8,12 @@
         <div class = "linebreak"></div>
         <div id = "titleContainer">
             <div id = "postTitle">Title</div>
-            <input id = "titleInput" {{#if createPost}}value = "{{editedPost.post_header}}"{{/if}}>
+            <input id = "titleInput" {{#if createPost}}{{else}}value = "{{editedPost.post_header}}"{{/if}}>
         </div>
         <div class = "linebreak"></div>
         <div id = "contentContainer">
             <div id = "content">Content</div>
-            <textarea id = "contentInput">{{#if createPost}} {{editedPost.post_content}}{{/if}}</textarea>
+            <textarea id = "contentInput">{{#if createPost}}{{else}}{{editedPost.post_content}}{{/if}}</textarea>
         </div>
         <div class = "linebreak"></div>
         {{#if createPost}}
