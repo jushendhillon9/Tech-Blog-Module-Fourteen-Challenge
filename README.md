@@ -1,1 +1,4 @@
 # Tech-Blog-Module-Fourteen-Challenge
+<img width="1470" alt="Screen Shot 2023-11-14 at 9 09 53 PM" src="https://github.com/jushendhillon9/Tech-Blog-Module-Fourteen-Challenge/assets/137123520/cee57758-e8c0-4533-9fca-8320bd9aa5e7">
+Description: In this module challenge, I was tasked with creating a tech blog website using sequelize, express, and node. I used express to create routes, and sequelize to create models which formed the basis for my M(odel)-V(iew)-C(ontroller) layout. The user can create an account, or login if they already have one, and create posts under their username. They can edit or delete their posts at any time, and they can also view the homepage to see other user's posts. If they want to they can comment on other's posts. 
+Link to deployed application: https://module-fourteen-challenge-7297223ad00f.herokuapp.com/homepage
