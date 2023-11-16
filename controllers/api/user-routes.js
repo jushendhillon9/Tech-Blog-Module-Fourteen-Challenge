@@ -71,7 +71,7 @@ router.post("/login", async (req, res) => {
             .json(err)
     }
 })
-/*
+
 router.get("/logout", async (req,res) => {
     try {
         console.log("BEING HIT")
@@ -82,7 +82,7 @@ router.get("/logout", async (req,res) => {
                     res.status(500).json(err);
                 }
                 else {
-                    res.json({message: "Successful Logout!"})
+                    res.redirect("/homepage")
                 }
             })
         }
@@ -91,7 +91,7 @@ router.get("/logout", async (req,res) => {
         console.log(err);
         res.status(500).json(err)
     }
-})*/
+})
 
 router.post("/createpost", async (req, res) => {
     try {
@@ -166,6 +166,10 @@ router.delete("/deletepost", async (req, res) => {
         console.error("Error deleting posts:", error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
+});
+
+router.get("*", (req, res) => {
+    res.redirect("/homepage");
 });
 
 

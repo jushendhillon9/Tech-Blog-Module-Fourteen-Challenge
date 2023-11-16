@@ -127,8 +127,4 @@ router.get("/editpost:postID", async (req, res) => {
     }
 })
 
-router.get("*", (req, res) => {
-    res.redirect("/homepage");
-});
-
 module.exports = router;
